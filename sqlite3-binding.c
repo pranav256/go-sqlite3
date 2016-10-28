@@ -17,6 +17,7 @@
 ** language. The code for the "sqlite3" command-line shell is also in a
 ** separate file. This file contains only code for the core SQLite library.
 */
+#ifndef USE_LIBSQLITE3
 #define SQLITE_CORE 1
 #define SQLITE_AMALGAMATION 1
 #ifndef SQLITE_PRIVATE
@@ -197846,5 +197847,9 @@ static int sqlite3Fts5VocabInit(Fts5Global *pGlobal, sqlite3 *db){
 
     
 #endif /* !defined(SQLITE_CORE) || defined(SQLITE_ENABLE_FTS5) */
+#else // USE_LIBSQLITE3
+// If users really want to link against the system sqlite3 we
+// need to make this file a noop.
+#endif
 
 /************** End of fts5.c ************************************************/

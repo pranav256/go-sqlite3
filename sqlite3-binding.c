@@ -1,4 +1,5 @@
 #ifndef USE_LIBSQLITE3
+#define SQLITE_DISABLE_INTRINSIC 1
 /******************************************************************************
 ** This file is an amalgamation of many separate C source files from SQLite
 ** version 3.17.0.  By combining all the individual C code files into this

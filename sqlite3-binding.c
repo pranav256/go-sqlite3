@@ -201403,6 +201403,6 @@ static int sqlite3Fts5VocabInit(Fts5Global *pGlobal, sqlite3 *db){
 
 /************** End of fts5.c ************************************************/
 #else // USE_LIBSQLITE3
- // If users really want to link against the system sqlite3 we
+// If users really want to link against the system sqlite3 we
 // need to make this file a noop.
- #endif
+#endif
